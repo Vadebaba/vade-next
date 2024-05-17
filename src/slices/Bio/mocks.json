@@ -1,0 +1,37 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "away",
+				"type": "Text"
+			},
+			"button": {
+				"__TYPE__": "FieldContent",
+				"value": "heading",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint do fugiat nostrud adipisicing esse exercitation nisi. Labore pariatur reprehenderit esse exercitation reprehenderit cupidatat. Dolore proident nostrud nisi."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
