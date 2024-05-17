@@ -39,7 +39,7 @@ export default function ContentList({
   useEffect(() => {
     // Animate list-items in with a stagger
     let ctx = gsap.context(() => {
-      itemsRef.current.forEach((item, index) => {
+      itemsRef.current.forEach((item) => {
         gsap.fromTo(
           item,
           {
@@ -104,11 +104,12 @@ export default function ContentList({
 
 
   const contentImages = items.map((item) => {
-    const image = isFilled.image(item.data.hover_image) ? item.data.hover_image : fallbackItemImage;
+    const image = isFilled.image(item.data.hover_image) ? 
+    item.data.hover_image : fallbackItemImage;
     return asImageSrc(image, {
       fit: "crop",
-      w: 220,
-      h: 320,
+      w: 200,
+      h: 220,
       exp: -10,
     });
   });
@@ -146,9 +147,9 @@ export default function ContentList({
 
             {isFilled.keyText(item.data.title) && (
               <li key={index}
-                ref={(el) => (itemsRef.current[index] = el)}
                 onMouseEnter={() => onMouseEnter(index)}
                 className="list-item opacity-0"
+          
               >
 
                 <Link
@@ -180,8 +181,8 @@ export default function ContentList({
 
       {/* Hover element */}
       <div
-        className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px]
-           w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
+        className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[220px]
+           w-[200px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
         style={{
           backgroundImage:
             currentItem !== null ? `url(${contentImages[currentItem]})` : "",
