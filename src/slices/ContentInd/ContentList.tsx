@@ -39,7 +39,7 @@ export default function ContentList({
   useEffect(() => {
     // Animate list-items in with a stagger
     let ctx = gsap.context(() => {
-      itemsRef.current.forEach((item) => {
+      itemsRef.current.forEach((item, index) => {
         gsap.fromTo(
           item,
           {
@@ -104,8 +104,8 @@ export default function ContentList({
 
 
   const contentImages = items.map((item) => {
-    const image = isFilled.image(item.data.hover_image) ? 
-    item.data.hover_image : fallbackItemImage;
+    const image = isFilled.image(item.data.hover_image) ?
+      item.data.hover_image : fallbackItemImage;
     return asImageSrc(image, {
       fit: "crop",
       w: 200,
@@ -144,13 +144,14 @@ export default function ContentList({
       >
         {items.map((item, index) => (
           <>
-
             {isFilled.keyText(item.data.title) && (
+
               <li key={index}
+                ref={(el) => (itemsRef.current[index] = el)}
                 onMouseEnter={() => onMouseEnter(index)}
                 className="list-item opacity-0"
-          
               >
+
 
                 <Link
                   href={`${urlPrefix}/${item.uid}`}
