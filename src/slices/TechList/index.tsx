@@ -10,8 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 
-gsap.registerPlugin(ScrollTrigger);
-
+gsap.registerPlugin(ScrollTrigger)
 
 /**
  * Props for `TechList`.
@@ -25,20 +24,21 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
   const component = useRef(null);
 
   useEffect(() => {
+    
+const techrow = document.querySelectorAll(".tech-row")
+
     let ctx = gsap.context(() => {
       // create as many GSAP animations and/or ScrollTriggers here as you want...
       const tl = gsap.timeline ({
         scrollTrigger: {
-          // pin: true,  pin the trigger element while active
-          
+          pin:true,
           start: "top bottom",
           end: "bottom top",
-          scrub: 3,
+          scrub: 4,
         },
       });
 
-      tl.fromTo(
-        ".tech-rrow",
+      tl.fromTo(techrow,
         {
           x: (index) => {
             return index % 2 === 0
@@ -77,7 +77,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
       {slice.items.map(({ tech_color, tech_name }, index) => (
         <div
           key={index}
-          className="tech-rrow mb-4 flex items-center justify-center gap-4 text-slate-700"
+          className="tech-row mb-4 flex items-center justify-center gap-4 text-slate-700"
           aria-label={tech_name || undefined }
         >
 
