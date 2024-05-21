@@ -79,7 +79,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center ">
+      <div className="grid pt-8 min-h-[60vh] grid-cols-1 md:grid-cols-2 items-center ">
        {/*<Shapes />*/}
        <Avatar
           image={slice.primary.avatar}

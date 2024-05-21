@@ -5,15 +5,7 @@ import gsap from "gsap";
 import { ImageField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
-{/*import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
- const prefersReducedMotion = usePrefersReducedMotion();
-
-{
-  image: ImageField;
-  className?: string;
-}) {
-*/}
 
 type AvatarProps ={
     image: ImageField;
@@ -30,7 +22,7 @@ export default function Avatar({ image,className,}: AvatarProps){
         { opacity: 0, scale: 1.4, },
         { scale: 1,
           opacity: 1,
-          duration:  1.3, //prefersReducedMotion ? 0 :
+          duration:  1.3, 
           ease: "power3.inOut" },
       );
 
@@ -66,23 +58,14 @@ export default function Avatar({ image,className,}: AvatarProps){
           },
           0
         );
-
-    };
+      };
     }, component);
 }, []);
 
-    {/*  
 
-         
-      };
-    }, component);
-    return () => ctx.revert(); // cleanup!
-  }, [prefersReducedMotion]);
- }
-*/}
 
   return (
-    <div ref={component} className={clsx("relative h-full w-full lg:left-16 lg:mt-8", className)}>
+    <div ref={component} className={clsx("relative h-full w-full lg:left-[5rem]", className)}>
       <div
         className="avatar aspect-square overflow-hidden rounded-3xl border-2 border-slate-700 opacity-0"
         style={{ perspective: "500px", perspectiveOrigin: "150% 150%" }}
@@ -92,7 +75,8 @@ export default function Avatar({ image,className,}: AvatarProps){
           className="avatar-image h-full w-full object-fill"
           imgixParams={{ q: 90 }}
         />
-        <div className="highlight absolute inset-0 hidden w-full scale-110 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 md:block"></div>
+        <div className="highlight absolute inset-0 hidden w-full scale-110 bg-gradient-to-tr 
+        from-transparent via-white to-transparent opacity-0 md:block"></div>
       </div>
     </div>
   );
