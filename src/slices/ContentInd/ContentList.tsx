@@ -68,8 +68,6 @@ export default function ContentList({
 
 
 
-
-
   const contentImages = items.map((item) => {
     const image = isFilled.image(item.data.hover_image) ?
       item.data.hover_image : fallbackItemImage;
@@ -102,9 +100,8 @@ export default function ContentList({
             {isFilled.keyText(item.data.title) && (
               <li key={index}
                 onMouseEnter={() => onMouseEnter(index)}
-                className="list-item opacity-0f"
-             
-              >
+                className="list-item opacity-0f"          
+              >            
 
                 <Link
                   href={urlPrefix + "/" + item.uid}
@@ -122,6 +119,7 @@ export default function ContentList({
                       ))}
                     </div>
                   </div>
+
                   <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
                     {viewMoreText} <MdArrowOutward />
                   </span>
@@ -148,30 +146,3 @@ export default function ContentList({
     </div>
   );
 }
-
-
-{/*
-
-  // Preload images
-  useEffect(() => {
-    contentImages.forEach((url) => {
-      if (!url) return;
-      const img = new Image();
-      img.src = url;
-    });
-  }, [contentImages]);
-
-
-
-
-
-
-
-
-
-  
-
-//const ref = useRef();
-
-   
- */}

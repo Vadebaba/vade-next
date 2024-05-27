@@ -182,6 +182,17 @@ type PageDocumentDataSlicesSlice =
  */
 interface PageDocumentData {
   /**
+   * Description  field in *page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *page*
    *
    * - **Field Type**: Slice Zone
@@ -252,17 +263,6 @@ interface ProjectDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
-
-  /**
-   * Date field in *Project*
-   *
-   * - **Field Type**: Date
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project.date
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#date
-   */
-  date: prismic.DateField;
 
   /**
    * Hover Image  field in *Project*

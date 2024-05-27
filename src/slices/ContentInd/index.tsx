@@ -4,6 +4,7 @@ import { Content, isFilled } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import ContentList from "./ContentList";
 import { createClient } from "@/prismicio";
+import Button from "@/components/Button";
 
 
 /**
@@ -47,7 +48,8 @@ const ContentInd = async ({ slice }: ContentIndProps): Promise<JSX.Element> => {
         contentType={slice.primary.content_type}
         viewMoreText={slice.primary.view_more_text}
         fallbackItemImage={slice.primary.fallback_item_image}
-      />
+      /> 
+   
     </Bounded>
   );
 };
