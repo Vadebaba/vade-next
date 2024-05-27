@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createClient } from "@/prismicio";
 import ContentBody from "@/components/ContentBody";
+import Button from "@/components/Button";
+import Bounded from "@/components/Bounded";
 
 type Params = { uid: string };
 
@@ -27,6 +29,7 @@ export async function generateMetadata({
   return {
     title: page.data.meta_title,
     description: page.data.meta_description,
+
   };
 }
 
