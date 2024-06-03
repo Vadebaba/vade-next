@@ -375,15 +375,15 @@ export interface SettingsDocumentDataNavItemItem {
  */
 interface SettingsDocumentData {
   /**
-   * Vade field in *Settings*
+   * Adewole_victor field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.vade
+   * - **API ID Path**: settings.Adewole_victor
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  vade: prismic.KeyTextField;
+  Adewole_victor: prismic.KeyTextField;
 
   /**
    * Nav_item field in *Settings*

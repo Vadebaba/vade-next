@@ -1,16 +1,13 @@
 import React from 'react';
 import { createClient } from '@/prismicio';
 import Link from 'next/link';
-//import { label } from 'three/examples/jsm/nodes/Nodes.js';
 import { PrismicNextLink } from '@prismicio/next';
 import NavBar from '@/components/NavBar';
-//import { link } from 'fs';
 
 
 export default async function Header() {
     const client = createClient();
     const settings = await client.getSingle("settings");
-
 
 
     return (

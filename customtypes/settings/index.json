@@ -6,10 +6,10 @@
   "status": true,
   "json": {
     "Main": {
-      "vade": {
+      "Adewole_victor": {
         "type": "Text",
         "config": {
-          "label": "Vade",
+          "label": "Adewole_victor",
           "placeholder": ""
         }
       },
