@@ -21,7 +21,7 @@ export default async function Footer() {
             className="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors
              duration-150 hover:text-yellow-400"
           >
-            Adewole victor
+            Vade
           </Link>
           <span
             className="hidden text-5xl font-extralight leading-[0] text-slate-400 sm:inline"
@@ -30,7 +30,7 @@ export default async function Footer() {
             
           </span>
           <p className=" text-sm text-slate-300 ">
-            © {new Date().getFullYear()} {settings.data.vade}
+            © {new Date().getFullYear()} {settings.data.Adewole_victor}
           </p>
         </div>
         <nav className="navigation" aria-label="Footer Navigation">
@@ -64,7 +64,7 @@ export default async function Footer() {
             <PrismicNextLink
               field={settings.data.github_link}
               className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.vade + " on GitHub"}
+              aria-label={settings.data.Adewole_victor + " on GitHub"}
             >
               <FaGithub />
             </PrismicNextLink>
@@ -73,7 +73,7 @@ export default async function Footer() {
             <PrismicNextLink
               field={settings.data.twitter_link}
               className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.vade + " on Twitter"}
+              aria-label={settings.data.Adewole_victor + " on Twitter"}
             >
               <FaTwitter />
             </PrismicNextLink>
@@ -82,7 +82,7 @@ export default async function Footer() {
             <PrismicNextLink
               field={settings.data.linkedin_link}
               className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.vade + " on LinkedIn"}
+              aria-label={settings.data.Adewole_victor + " on LinkedIn"}
             >
               <FaLinkedin />
             </PrismicNextLink>
